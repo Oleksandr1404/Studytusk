@@ -1,0 +1,115 @@
+/* style-dashboard.css */
+
+.stats-circles-container {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.stat-circle-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    transition: transform 0.3s ease;
+}
+
+.stat-circle-box:hover {
+    transform: translateY(-10px);
+    /* Піднімаємо коло при наведенні */
+}
+
+.circle {
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Початковий фон (завжди видима частина) */
+    background: conic-gradient(rgba(255, 255, 255, 0.1) 0% 100%);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+    transition: 0.5s ease-in-out;
+}
+
+/* Створюємо ефект дуги (progress) через псевдоелемент */
+.circle::after {
+    content: '';
+    position: absolute;
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    background: inherit;
+    /* Копіюємо conic-gradient */
+}
+
+/* Кольорові кольори для дуг (оновлюватимемо через JS) */
+[data-status="todo"] .circle {
+    /* Червоний акцент */
+    --percent: 0;
+    /* JS оновлюватиме цю змінну */
+    background: conic-gradient(#ff6b6b calc(var(--percent) * 3.6deg), rgba(255, 255, 255, 0.1) 0deg);
+}
+
+[data-status="process"] .circle {
+    /* Помаранчевий акцент (як Login) */
+    --percent: 0;
+    background: conic-gradient(orange calc(var(--percent) * 3.6deg), rgba(255, 255, 255, 0.1) 0deg);
+}
+
+[data-status="done"] .circle {
+    /* Зелений/блакитний акцент */
+    --percent: 0;
+    background: conic-gradient(#38ef7d calc(var(--percent) * 3.6deg), rgba(255, 255, 255, 0.1) 0deg);
+}
+
+
+/* Внутрішнє "скляне" коло */
+.inner-circle {
+    width: 140px;
+    height: 140px;
+    background: rgba(255, 255, 255, 0.1);
+    /* Прозоре скло */
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+.inner-circle .count {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.status-label {
+    color: #fff;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    opacity: 0.8;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .stats-circles-container {
+        gap: 30px;
+    }
+
+    .circle {
+        width: 140px;
+        height: 140px;
+    }
+
+    .inner-circle {
+        width: 115px;
+        height: 115px;
+    }
+}

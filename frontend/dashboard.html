@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style2.css" />
+    <link rel="stylesheet" href="style-dashboard.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+    <title>Progress Dashboard</title>
+  </head>
+  <body>
+    <header>
+      <div class="navbar">
+        <div class="logo"><a href="index.html">Logo</a></div>
+        <ul class="links">
+          <li>
+            <a href="/frontend/dashboard.html" class="nav-link">Dashboard</a>
+          </li>
+          <li><a href="/frontend/tasks.html" class="nav-link">Tasks</a></li>
+          <li><a href="#" class="nav-link">Deadlines</a></li>
+        </ul>
+        <a href="/frontend/login.html" class="action_btn">Log In</a>
+        <div class="toggle_btn"><i class="fa-solid fa-bars"></i></div>
+      </div>
+      <div class="dropdown_menu open">
+        <li><a href="dashboard" class="nav-link">Dashboard</a></li>
+        <li><a href="tasks" class="nav-link">Tasks</a></li>
+        <li><a href="deadlines" class="nav-link">Deadlines</a></li>
+        <li><a href="" class="action_btn">Log In</a></li>
+      </div>
+    </header>
+
+    <main>
+      <section id="hero">
+        <h1>Progress Dashboard</h1>
+        <p style="margin-bottom: 50px">
+          Your academic statistics in dynamic view.
+        </p>
+
+        <div class="stats-circles-container">
+          <div class="stat-circle-box" data-status="todo">
+            <div class="circle" id="circle-todo">
+              <div class="inner-circle">
+                <span class="count" id="stat-count-todo">0</span>
+              </div>
+            </div>
+            <p class="status-label">Not Done</p>
+          </div>
+
+          <div class="stat-circle-box" data-status="process">
+            <div class="circle" id="circle-process">
+              <div class="inner-circle">
+                <span class="count" id="stat-count-process">0</span>
+              </div>
+            </div>
+            <p class="status-label">In Progress</p>
+          </div>
+
+          <div class="stat-circle-box" data-status="done">
+            <div class="circle" id="circle-done">
+              <div class="inner-circle">
+                <span class="count" id="stat-count-done">0</span>
+              </div>
+            </div>
+            <p class="status-label">Completed</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="/Backend/dashboard.js"></script>
+    <script></script>
+  </body>
+</html>
