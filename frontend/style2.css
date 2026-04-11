@@ -295,3 +295,235 @@ section#hero{
 .done {
     background: #00c851;
 }
+
+
+/* --- Секція керування (Пошук та кнопки) --- */
+.controls {
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.controls-container {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    /* Щоб на мобільних пристроях кнопки переносились */
+    align-items: center;
+}
+
+.search-input {
+    flex: 1;
+    /* Займає весь вільний простір */
+    min-width: 250px;
+    padding: 12px 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    color: white;
+    backdrop-filter: blur(10px);
+    outline: none;
+}
+
+.search-input:focus {
+    border-color: orange;
+}
+
+.filter-group {
+    display: flex;
+    gap: 10px;
+}
+
+/* --- Покращений Стиль для Випадаючого Списку --- */
+
+.filter-select {
+    /* Робимо фон прозорим і додаємо ефект скла */
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    /* Текст на кнопці */
+
+    /* Відступи та радіус */
+    padding: 10px 15px;
+    border-radius: 10px;
+
+    /* Важливо: Приховуємо стандартну стрілочку браузера */
+    -webkit-appearance: none;
+    /* Для Chrome/Safari */
+    -moz-appearance: none;
+    /* Для Firefox */
+    appearance: none;
+
+    /* Додаємо свою, кастомну стрілочку */
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3cpolyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 15px;
+
+    /* Трохи відступу справа для стрілочки */
+    padding-right: 35px;
+
+    cursor: pointer;
+    outline: none;
+    transition: 0.3s ease;
+}
+
+/* Коли список відкривається, браузер все одно показує своє вікно, 
+   але ми можемо хоча б трохи змінити фон самих варіантів (не скрізь працює ідеально) */
+.filter-select option {
+    background: #2b2b2b;
+    /* Робимо фон варіантів темним, щоб було видно білий текст */
+    color: white;
+    /* Текст варіантів */
+    padding: 10px;
+    /* Трохи відступу */
+}
+
+/* Прибираємо синій фон при наведенні у Firefox */
+.filter-select:focus::-ms-value {
+    background-color: transparent;
+    color: white;
+}
+
+.add-btn {
+    background: orange;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.add-btn:hover {
+    background: coral;
+    transform: translateY(-2px);
+}
+
+/* --- Стан "Порожньо" (Empty State) --- */
+.empty-state {
+    text-align: center;
+    color: white;
+    margin-top: 50px;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.empty-state i {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    color: orange;
+}
+
+/* --- Модальне вікно (Стилізація Overlay та Modal) --- */
+.modal-overlay {
+    display: none;
+    /* Спочатку приховано */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+    z-index: 2000;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal {
+    background: #1e1e1e;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 25px;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 450px;
+    color: white;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+    color: #ccc;
+}
+
+.form-input {
+    width: 100%;
+    padding: 10px;
+    background: #2b2b2b;
+    border: 1px solid #444;
+    border-radius: 8px;
+    color: white;
+}
+
+.form-textarea {
+    height: 100px;
+    resize: none;
+}
+
+.tags-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.tag-option {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    background: #2b2b2b;
+    padding: 8px;
+    border-radius: 8px;
+    font-size: 0.8rem;
+}
+
+.submit-btn {
+    width: 100%;
+    margin-top: 20px;
+    background: orange;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* --- Кольори тегів --- */
+.tag-work {
+    color: #5dade2;
+}
+
+.tag-personal {
+    color: #58d68d;
+}
+
+.tag-ideas {
+    color: #f4d03f;
+}
+
+.tag-reminders {
+    color: #ec7063;
+}
