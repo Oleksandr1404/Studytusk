@@ -1,529 +1,663 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
 }
 
-body{
-    height: 100vh;
-    background-color: #000;
-    background-image: url('/img/background.jpg');
-    background-size:cover;
-    background-position: center;
+body {
+  height: 100vh;
+  background-color: #000;
+  background-image: url("/img/background.jpg");
+  background-size: cover;
+  background-position: center;
 }
 
-li{
-    list-style: none;
+li {
+  list-style: none;
 }
 
 a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 1rem;
+  text-decoration: none;
+  color: #fff;
+  font-size: 1rem;
 }
 
 a:hover {
-    color: coral;
+  color: coral;
 }
 
 .nav-link {
-    color: #fff;
-    position: relative;
-    transition: color 0.3s ease;
+  color: #fff;
+  position: relative;
+  transition: color 0.3s ease;
 }
 
 .nav-link:hover {
-    color: coral;
+  color: coral;
 }
 
 .nav-link::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: -5px;
-    left: 0;
-    background-color: coral;
-    transition: width 0.3s ease;
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: coral;
+  transition: width 0.3s ease;
 }
 
 .nav-link:hover::after {
-    width: 100%;
-} 
+  width: 100%;
+}
 /* Header */
 
-header{
-    position: relative;
-    padding: 0 2rem;
-
+header {
+  position: relative;
+  padding: 0 2rem;
 }
 
-.navbar{
-    width: 100%;
-    height: 60px;
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.navbar {
+  width: 100%;
+  height: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.navbar .logo a{
-    font-size: 1.5rem;
-    font-weight: bold;
+.navbar .logo a {
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
-.navbar .links{
-    display: flex;
-    gap: 2rem;
+.navbar .links {
+  display: flex;
+  gap: 2rem;
 }
 
-.navbar .toggle_btn{
-    color: #fff;
-    font-size: 1.5rem;
-    cursor: pointer;
-    display: none;
+.navbar .toggle_btn {
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: none;
 }
 
-.action_btn{
-    background-color: orange;
-    color: #fff;
-    padding: 0.5rem 1rem;
-    border: none;
-    outline: none;
-    border-radius: 20px;
-    font-size: 0.8rem;
-    font-weight: bold;
-    cursor: pointer;
-    transition: scale 0.2 ease;
+.action_btn {
+  background-color: orange;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: scale 0.2 ease;
 }
 
-.action_btn:hover{
-    scale: 1.05;
-    color: #fff;
+.action_btn:hover {
+  scale: 1.05;
+  color: #fff;
 }
 
-.action_btn:active{
-    scale: 0.95;
+.action_btn:active {
+  scale: 0.95;
 }
 /* Dropdown Menu */
-.dropdown_menu{
-    display: none;
-    position:absolute;
-    right: 2rem;
-    top: 60px;
-    height: 0;
-    width: 300px;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(15px);
-    border-radius: 10px;
-    overflow: hidden;
-    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+.dropdown_menu {
+  display: none;
+  position: absolute;
+  right: 2rem;
+  top: 60px;
+  height: 0;
+  width: 300px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-.dropdown_menu.open{
-    height: 210px;
-
+.dropdown_menu.open {
+  height: 210px;
 }
 
-.dropdown_menu li{
-    padding: 0.7rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.dropdown_menu li {
+  padding: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.dropdown_menu .action_btn{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-
+.dropdown_menu .action_btn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
-
 
 /*Hero Section*/
 
-section#hero{
-    height: calc(100vh - 60px);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: #fff;
+section#hero {
+  height: calc(100vh - 60px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
 }
 
-#hero h1{
-    font-size: 3rem;
-    margin-bottom: 1rem;
+#hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
 }
 
 /* Responsive design */
 
-@media (max-width: 992px){
-    .navbar .links,
-    .navbar .action_btn{
-        display: none;
-    }
+@media (max-width: 992px) {
+  .navbar .links,
+  .navbar .action_btn {
+    display: none;
+  }
 
-    .navbar .toggle_btn{
-        display: block;
-    }
+  .navbar .toggle_btn {
+    display: block;
+  }
 
-    .dropdown_menu{
-        display: block;
-    }
+  .dropdown_menu {
+    display: block;
+  }
 }
 
 @media (max-width: 576px) {
-    .dropdown_menu{
-        left: 2rem;
-        width: unset;
-    }
-
-
+  .dropdown_menu {
+    left: 2rem;
+    width: unset;
+  }
 }
 
 /* Секція завдань */
 .tasks-container {
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .tasks-header {
-    width: 100%;
-    max-width: 1200px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 2rem;
-    color: white;
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  color: white;
 }
 
 .task-grid {
-    width: 100%;
-    max-width: 1200px;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
 }
 
 /* Картка завдання */
 .task-card {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(15px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    padding: 20px;
-    border-radius: 15px;
-    color: white;
-    transition: 0.3s ease;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 20px;
+  border-radius: 15px;
+  color: white;
+  transition: 0.3s ease;
 }
 
 .task-card:hover {
-    border-color: coral;
+  border-color: coral;
 }
 
 /* Модалка */
 .modal {
-    display: none;
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    justify-content: center;
-    align-items: center;
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
 }
 
 .modal-content {
-    background: #1e1e1e;
-    padding: 30px;
-    border-radius: 20px;
-    border: 1px solid coral;
-    width: 400px;
-    color: white;
+  background: #1e1e1e;
+  padding: 30px;
+  border-radius: 20px;
+  border: 1px solid coral;
+  width: 400px;
+  color: white;
 }
 
 .modal-content input,
 .modal-content select {
-    width: 100%;
-    padding: 12px;
-    margin: 10px 0;
-    border-radius: 8px;
-    border: 1px solid #444;
-    background: #2b2b2b;
-    color: white;
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: 1px solid #444;
+  background: #2b2b2b;
+  color: white;
 }
 
 .modal-buttons {
-    display: flex;
-    gap: 10px;
-    margin-top: 20px;
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
 }
 
 .cancel-btn {
-    background: none;
-    border: none;
-    color: white;
-    cursor: pointer;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
 }
 
 /* Статуси */
 .status-tag {
-    display: inline-block;
-    padding: 5px 12px;
-    border-radius: 6px;
-    font-size: 0.85rem;
-    margin-top: 10px;
-    font-weight: bold;
+  display: inline-block;
+  padding: 5px 12px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  margin-top: 10px;
+  font-weight: bold;
 }
 
 .todo {
-    background: #ff4444;
+  background: #ff4444;
 }
 
 .process {
-    background: #ffbb33;
-    color: #000;
+  background: #ffbb33;
+  color: #000;
 }
 
 .done {
-    background: #00c851;
+  background: #00c851;
 }
-
 
 /* --- Секція керування (Пошук та кнопки) --- */
 .controls {
-    padding: 2rem;
-    display: flex;
-    justify-content: center;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
 }
 
 .controls-container {
-    width: 100%;
-    max-width: 1200px;
-    display: flex;
-    gap: 15px;
-    flex-wrap: wrap;
-    /* Щоб на мобільних пристроях кнопки переносились */
-    align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  /* Щоб на мобільних пристроях кнопки переносились */
+  align-items: center;
 }
 
 .search-input {
-    flex: 1;
-    /* Займає весь вільний простір */
-    min-width: 250px;
-    padding: 12px 20px;
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 12px;
-    color: white;
-    backdrop-filter: blur(10px);
-    outline: none;
+  flex: 1;
+  /* Займає весь вільний простір */
+  min-width: 250px;
+  padding: 12px 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  color: white;
+  backdrop-filter: blur(10px);
+  outline: none;
 }
 
 .search-input:focus {
-    border-color: orange;
+  border-color: orange;
 }
 
 .filter-group {
-    display: flex;
-    gap: 10px;
+  display: flex;
+  gap: 10px;
 }
 
 /* --- Покращений Стиль для Випадаючого Списку --- */
 
 .filter-select {
-    /* Робимо фон прозорим і додаємо ефект скла */
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    color: white;
-    /* Текст на кнопці */
+  /* Робимо фон прозорим і додаємо ефект скла */
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  /* Текст на кнопці */
 
-    /* Відступи та радіус */
-    padding: 10px 15px;
-    border-radius: 10px;
+  /* Відступи та радіус */
+  padding: 10px 15px;
+  border-radius: 10px;
 
-    /* Важливо: Приховуємо стандартну стрілочку браузера */
-    -webkit-appearance: none;
-    /* Для Chrome/Safari */
-    -moz-appearance: none;
-    /* Для Firefox */
-    appearance: none;
+  /* Важливо: Приховуємо стандартну стрілочку браузера */
+  -webkit-appearance: none;
+  /* Для Chrome/Safari */
+  -moz-appearance: none;
+  /* Для Firefox */
+  appearance: none;
 
-    /* Додаємо свою, кастомну стрілочку */
-    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3cpolyline%3e%3c/svg%3e");
-    background-repeat: no-repeat;
-    background-position: right 10px center;
-    background-size: 15px;
+  /* Додаємо свою, кастомну стрілочку */
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3cpolyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 15px;
 
-    /* Трохи відступу справа для стрілочки */
-    padding-right: 35px;
+  /* Трохи відступу справа для стрілочки */
+  padding-right: 35px;
 
-    cursor: pointer;
-    outline: none;
-    transition: 0.3s ease;
+  cursor: pointer;
+  outline: none;
+  transition: 0.3s ease;
 }
 
 /* Коли список відкривається, браузер все одно показує своє вікно, 
    але ми можемо хоча б трохи змінити фон самих варіантів (не скрізь працює ідеально) */
 .filter-select option {
-    background: #2b2b2b;
-    /* Робимо фон варіантів темним, щоб було видно білий текст */
-    color: white;
-    /* Текст варіантів */
-    padding: 10px;
-    /* Трохи відступу */
+  background: #2b2b2b;
+  /* Робимо фон варіантів темним, щоб було видно білий текст */
+  color: white;
+  /* Текст варіантів */
+  padding: 10px;
+  /* Трохи відступу */
 }
 
 /* Прибираємо синій фон при наведенні у Firefox */
 .filter-select:focus::-ms-value {
-    background-color: transparent;
-    color: white;
+  background-color: transparent;
+  color: white;
 }
 
 .add-btn {
-    background: orange;
-    color: white;
-    border: none;
-    padding: 12px 20px;
-    border-radius: 12px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: 0.3s ease;
+  background: orange;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
 }
 
 .add-btn:hover {
-    background: coral;
-    transform: translateY(-2px);
+  background: coral;
+  transform: translateY(-2px);
 }
 
 /* --- Стан "Порожньо" (Empty State) --- */
 .empty-state {
-    text-align: center;
-    color: white;
-    margin-top: 50px;
-    padding: 40px;
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(10px);
-    border-radius: 20px;
-    max-width: 500px;
-    margin-left: auto;
-    margin-right: auto;
+  text-align: center;
+  color: white;
+  margin-top: 50px;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .empty-state i {
-    font-size: 3rem;
-    margin-bottom: 15px;
-    color: orange;
+  font-size: 3rem;
+  margin-bottom: 15px;
+  color: orange;
 }
 
 /* --- Модальне вікно (Стилізація Overlay та Modal) --- */
 .modal-overlay {
-    display: none;
-    /* Спочатку приховано */
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.7);
-    backdrop-filter: blur(5px);
-    z-index: 2000;
-    justify-content: center;
-    align-items: center;
+  display: none;
+  /* Спочатку приховано */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(5px);
+  z-index: 2000;
+  justify-content: center;
+  align-items: center;
 }
 
 .modal {
-    background: #1e1e1e;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    padding: 25px;
-    border-radius: 20px;
-    width: 90%;
-    max-width: 450px;
-    color: white;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  background: #1e1e1e;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 25px;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 450px;
+  color: white;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
 .modal-header {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
 }
 
 .form-group {
-    margin-bottom: 15px;
+  margin-bottom: 15px;
 }
 
 .form-label {
-    display: block;
-    margin-bottom: 5px;
-    font-size: 0.9rem;
-    color: #ccc;
+  display: block;
+  margin-bottom: 5px;
+  font-size: 0.9rem;
+  color: #ccc;
 }
 
 .form-input {
-    width: 100%;
-    padding: 10px;
-    background: #2b2b2b;
-    border: 1px solid #444;
-    border-radius: 8px;
-    color: white;
+  width: 100%;
+  padding: 10px;
+  background: #2b2b2b;
+  border: 1px solid #444;
+  border-radius: 8px;
+  color: white;
 }
 
 .form-textarea {
-    height: 100px;
-    resize: none;
+  height: 100px;
+  resize: none;
 }
 
 .tags-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
 }
 
 .tag-option {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    cursor: pointer;
-    background: #2b2b2b;
-    padding: 8px;
-    border-radius: 8px;
-    font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  background: #2b2b2b;
+  padding: 8px;
+  border-radius: 8px;
+  font-size: 0.8rem;
 }
 
 .submit-btn {
-    width: 100%;
-    margin-top: 20px;
-    background: orange;
-    color: white;
-    border: none;
-    padding: 12px;
-    border-radius: 10px;
-    font-weight: bold;
-    cursor: pointer;
+  width: 100%;
+  margin-top: 20px;
+  background: orange;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
 }
 
 /* --- Кольори тегів --- */
 .tag-work {
-    color: #5dade2;
+  color: #5dade2;
 }
 
 .tag-personal {
-    color: #58d68d;
+  color: #58d68d;
 }
 
 .tag-ideas {
-    color: #f4d03f;
+  color: #f4d03f;
 }
 
 .tag-reminders {
-    color: #ec7063;
+  color: #ec7063;
+}
+
+/* 1. Робимо оверлей видимим, коли є клас active */
+.modal-overlay.active {
+  display: flex !important;
+}
+
+/* 2. ПРИМУСОВО показуємо внутрішню модалку, коли оверлей активний */
+.modal-overlay.active .modal {
+  display: block !important;
+  background: #1e1e1e; /* Темний фон картки */
+  border: 1px solid coral;
+  padding: 25px;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 450px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* 3. Стиль кнопки закриття (хрестика) */
+.modal-close {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  float: right;
+}
+
+.modal-close:hover {
+  color: coral;
+}
+
+/* Сітка для нотаток */
+.notes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Сама картка нотатки */
+.note-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 20px;
+  border-radius: 15px;
+  color: white;
+  position: relative;
+  transition: 0.3s ease;
+}
+
+.note-card:hover {
+  border-color: orange;
+  transform: translateY(-5px);
+}
+
+.note-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.note-title {
+  font-size: 1.2rem;
+  color: orange;
+}
+
+.delete-btn {
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.delete-btn:hover {
+  color: #ff4444;
+}
+
+.note-text {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 15px;
+  color: #eee;
+}
+
+/* Стилі тегів (Labels) */
+.tag-label {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.tag-work {
+  background: #5dade2;
+  color: white;
+}
+.tag-personal {
+  background: #58d68d;
+  color: white;
+}
+.tag-ideas {
+  background: #f4d03f;
+  color: black;
+}
+.tag-reminders {
+  background: #ec7063;
+  color: white;
+}
+.note-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.edit-btn,
+.delete-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+
+.edit-btn {
+  color: #5dade2;
+} /* Блакитний для редагування */
+.delete-btn {
+  color: #ec7063;
+} /* Червоний для видалення */
+
+.edit-btn:hover,
+.delete-btn:hover {
+  transform: scale(1.2);
 }

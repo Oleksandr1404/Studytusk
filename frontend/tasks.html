@@ -53,19 +53,18 @@
         <select id="taskStatus">
           <option value="todo">Not Done</option>
           <option value="process">In Progress</option>
-          <option value="done">Done</option>
+          <option value="done">Completed</option>
         </select>
 
         <div class="modal-buttons">
-          <button id="saveBtn" class="action_btn" onclick="saveTask()">
-            Save
-          </button>
+          <!-- Прибрав onclick, щоб не було конфліктів -->
+          <button id="saveBtn" class="action_btn">Save</button>
           <button class="cancel-btn" onclick="closeModal()">Cancel</button>
         </div>
       </div>
     </div>
 
     <!-- ПІДКЛЮЧАЄМО ТВІЙ JS -->
-    <script src="/Backend/task.js"></script>
+    <script src="../Backend/task.js"></script>
   </body>
 </html>
